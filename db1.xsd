@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by phani (Stonybrook) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.auditions.com/my-data" targetNamespace="http://www.auditions.com/my-data" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<element name="ShowMarks">
+		<complexType>
+			<sequence>
+				<element name="showDetails" type="vc:showDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="judge" type="vc:judgeType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="contestant" type="vc:contestantType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="piece" type="vc:pieceType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="showJudge" type="vc:showJudgeType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="score" type="vc:scoreType" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="showDetailsType">
+		<sequence>
+			<element name="showId"/>
+			<element name="showName"/>
+			<element name="showDate"/>
+		</sequence>
+	</complexType>
+	<complexType name="judgeType">
+		<sequence>
+			<element name="judgeId"/>
+			<element name="judgeName"/>
+		</sequence>
+	</complexType>
+	<complexType name="contestantType">
+		<sequence>
+			<element name="contestantId"/>
+			<element name="contestantName"/>
+		</sequence>
+	</complexType>
+	<complexType name="pieceType">
+		<sequence>
+			<element name="pieceId"/>
+			<element name="pieceName"/>
+		</sequence>
+	</complexType>
+	<complexType name="showJudgeType">
+		<sequence>
+			<element name="showJudgeId"/>
+			<element name="showId"/>
+			<element name="judgeId"/>
+		</sequence>
+	</complexType>
+	<complexType name="scoreType">
+		<sequence>
+			<element name="sjId"/>
+			<element name="contId"/>
+			<element name="pieceId"/>
+			<element name="marks"/>
+		</sequence>
+	</complexType>
+</schema>

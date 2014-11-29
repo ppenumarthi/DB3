@@ -1,0 +1,435 @@
+<root>
+    <piece>
+        <pieceId> 1</pieceId>
+        <pieceName> Barcarolle</pieceName>
+        <pieceId> 2</pieceId>
+        <pieceName> Giselle</pieceName>
+        <pieceId> 3</pieceId>
+        <pieceName> The Tramp</pieceName>
+        <pieceId> 4</pieceId>
+        <pieceName> Besame Mucho</pieceName>
+        <pieceId> 5</pieceId>
+        <pieceName> Swan Lake</pieceName>
+        <pieceId> 6</pieceId>
+        <pieceName> Habanera</pieceName>
+    </piece>
+    <Contestant>
+        <contestantId> 1</contestantId>
+        <contestantName> Joe </contestantName>
+        <contestantId> 2</contestantId>
+        <contestantName> Bob </contestantName>
+        <contestantId> 3</contestantId>
+        <contestantName> Mary </contestantName>
+        <contestantId> 4</contestantId>
+        <contestantName> Ann </contestantName>
+        <contestantId> 5</contestantId>
+        <contestantName> Bess </contestantName>
+        <contestantId> 6</contestantId>
+        <contestantName> Tom </contestantName>
+        <contestantId> 7</contestantId>
+        <contestantName> Don </contestantName>
+    </Contestant>
+    <Judge>
+        <judgeId> 1</judgeId>
+        <judgeName> Judy</judgeName>
+        <judgeId> 2</judgeId>
+        <judgeName> Lucy</judgeName>
+        <judgeId> 3</judgeId>
+        <judgeName> Irving</judgeName>
+        <judgeId> 4</judgeId>
+        <judgeName> Phil</judgeName>
+        <judgeId> 5</judgeId>
+        <judgeName> Oscar</judgeName>
+    </Judge>
+    <showDetails>
+        <showId> 1</showId>
+        <showName> Show1</showName>
+        <showDate> 20140202</showDate>
+        <showId> 2</showId>
+        <showName> Show2</showName>
+        <showDate> 20140402</showDate>
+        <showId> 3</showId>
+        <showName> Show3</showName>
+        <showDate> 20140602</showDate>
+        <showId> 4</showId>
+        <showName> Show4</showName>
+        <showDate> 20140802</showDate>
+        <showId> 5</showId>
+        <showName> Show5</showName>
+        <showDate> 20141002</showDate>
+    </showDetails>
+    <showJudge>
+        <showJudgeId> 1 </showJudgeId>
+        <showId> 1 </showId>
+        <judgeId> 1</judgeId>
+        <showJudgeId> 2 </showJudgeId>
+        <showId> 1 </showId>
+        <judgeId> 2</judgeId>
+        <showJudgeId> 3 </showJudgeId>
+        <showId> 1 </showId>
+        <judgeId> 3</judgeId>
+        <showJudgeId> 4 </showJudgeId>
+        <showId> 2 </showId>
+        <judgeId> 1</judgeId>
+        <showJudgeId> 5 </showJudgeId>
+        <showId> 2 </showId>
+        <judgeId> 4</judgeId>
+        <showJudgeId> 6 </showJudgeId>
+        <showId> 3 </showId>
+        <judgeId> 3</judgeId>
+        <showJudgeId> 7 </showJudgeId>
+        <showId> 3 </showId>
+        <judgeId> 4</judgeId>
+        <showJudgeId> 8 </showJudgeId>
+        <showId> 3 </showId>
+        <judgeId> 5</judgeId>
+        <showJudgeId> 9 </showJudgeId>
+        <showId> 4 </showId>
+        <judgeId> 2</judgeId>
+        <showJudgeId> 10 </showJudgeId>
+        <showId> 4 </showId>
+        <judgeId> 5</judgeId>
+        <showJudgeId> 11 </showJudgeId>
+        <showId> 5 </showId>
+        <judgeId> 2</judgeId>
+        <showJudgeId> 12 </showJudgeId>
+        <showId> 5 </showId>
+        <judgeId> 3</judgeId>
+        <showJudgeId> 13 </showJudgeId>
+        <showId> 5 </showId>
+        <judgeId> 4</judgeId>
+    </showJudge>
+    <scores>
+        <sjId> 1</sjId>
+        <contId>1 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 7</marks>
+        <sjId> 2</sjId>
+        <contId>1 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 8</marks>
+        <sjId> 3</sjId>
+        <contId>1 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 6</marks>
+        <sjId> 1</sjId>
+        <contId>3 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 5</marks>
+        <sjId> 2</sjId>
+        <contId>3 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 6</marks>
+        <sjId> 3</sjId>
+        <contId>3 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 6</marks>
+        <sjId> 1</sjId>
+        <contId>3 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 9</marks>
+        <sjId> 2</sjId>
+        <contId>3 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 6</marks>
+        <sjId> 3</sjId>
+        <contId>3 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 8</marks>
+        <sjId> 1</sjId>
+        <contId>5 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 4</marks>
+        <sjId> 2</sjId>
+        <contId>5 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 5</marks>
+        <sjId> 3</sjId>
+        <contId>5 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 6</marks>
+        <sjId> 1</sjId>
+        <contId>7 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 9</marks>
+        <sjId> 2</sjId>
+        <contId>7 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 9</marks>
+        <sjId> 3</sjId>
+        <contId>7 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 7</marks>
+        <sjId> 1</sjId>
+        <contId>7 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 7</marks>
+        <sjId> 2</sjId>
+        <contId>7 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 5</marks>
+        <sjId> 3</sjId>
+        <contId>7 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 10</marks>
+        <sjId> 4</sjId>
+        <contId>3 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 3</marks>
+        <sjId> 5</sjId>
+        <contId>3 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 5</marks>
+        <sjId> 4</sjId>
+        <contId>3 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 9</marks>
+        <sjId> 5</sjId>
+        <contId>3 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 10</marks>
+        <sjId> 4</sjId>
+        <contId>4 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 7</marks>
+        <sjId> 5</sjId>
+        <contId>4 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 6</marks>
+        <sjId> 4</sjId>
+        <contId>5 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 8</marks>
+        <sjId> 5</sjId>
+        <contId>5 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 7</marks>
+        <sjId> 4</sjId>
+        <contId>6 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 5</marks>
+        <sjId> 5</sjId>
+        <contId>6 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 5</marks>
+        <sjId> 4</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 7</marks>
+        <sjId> 5</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 6</marks>
+        <sjId> 6</sjId>
+        <contId>2 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 8</marks>
+        <sjId> 7</sjId>
+        <contId>3 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 7</marks>
+        <sjId> 8</sjId>
+        <contId>3 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 9</marks>
+        <sjId> 6</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 7</marks>
+        <sjId> 7</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 6</marks>
+        <sjId> 8</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 4</marks>
+        <sjId> 6</sjId>
+        <contId>5 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 6</marks>
+        <sjId> 7</sjId>
+        <contId>5 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 8</marks>
+        <sjId> 8</sjId>
+        <contId>5 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 7</marks>
+        <sjId> 6</sjId>
+        <contId>6 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 9</marks>
+        <sjId> 7</sjId>
+        <contId>6 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 7</marks>
+        <sjId> 8</sjId>
+        <contId>6 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 6</marks>
+        <sjId> 6</sjId>
+        <contId>7 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 8</marks>
+        <sjId> 7</sjId>
+        <contId>7 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 6</marks>
+        <sjId> 8</sjId>
+        <contId>7 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 9</marks>
+        <sjId> 9</sjId>
+        <contId>1 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 7</marks>
+        <sjId> 10</sjId>
+        <contId>1 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 6</marks>
+        <sjId> 9</sjId>
+        <contId>2 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 6</marks>
+        <sjId> 10</sjId>
+        <contId>2 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 8</marks>
+        <sjId> 9</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 9</marks>
+        <sjId> 10</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 8</marks>
+        <sjId> 9</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 8</marks>
+        <sjId> 10</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 10</marks>
+        <sjId> 9</sjId>
+        <contId>6 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 5</marks>
+        <sjId> 10</sjId>
+        <contId>6 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 5</marks>
+
+
+
+ <sjId> 11</sjId>
+        <contId>2 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 3</marks>
+        <sjId> 12</sjId>
+        <contId>2 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 5</marks>
+        <sjId> 13</sjId>
+        <contId>2 </contId>
+        <pieceId>5 </pieceId>
+        <marks> 6</marks>
+<sjId> 11</sjId>
+        <contId>2 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 4</marks>
+        <sjId> 12</sjId>
+        <contId>2 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 6</marks>
+        <sjId> 13</sjId>
+        <contId>2 </contId>
+        <pieceId>2 </pieceId>
+        <marks> 8</marks>
+<sjId> 11</sjId>
+        <contId>3 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 5</marks>
+        <sjId> 12</sjId>
+        <contId>3 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 7</marks>
+        <sjId> 13</sjId>
+        <contId>3 </contId>
+        <pieceId>1 </pieceId>
+        <marks> 10</marks>
+<sjId> 11</sjId>
+        <contId>3 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 6</marks>
+        <sjId> 12</sjId>
+        <contId>3 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 8</marks>
+        <sjId> 13</sjId>
+        <contId>3 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 7</marks>
+<sjId> 11</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 7</marks>
+        <sjId> 12</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 9</marks>
+        <sjId> 13</sjId>
+        <contId>4 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 6</marks>
+<sjId> 11</sjId>
+        <contId>5 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 9</marks>
+        <sjId> 12</sjId>
+        <contId>5 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 8</marks>
+        <sjId> 13</sjId>
+        <contId>5 </contId>
+        <pieceId>4 </pieceId>
+        <marks> 8</marks>
+<sjId> 11</sjId>
+        <contId>5 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 8</marks>
+        <sjId> 12</sjId>
+        <contId>5 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 7</marks>
+        <sjId> 13</sjId>
+        <contId>5 </contId>
+        <pieceId>6 </pieceId>
+        <marks> 10</marks>
+<sjId> 11</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 6</marks>
+        <sjId> 12</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 6</marks>
+        <sjId> 13</sjId>
+        <contId>6 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 8</marks>
+<sjId> 11</sjId>
+        <contId>7 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 5</marks>
+        <sjId> 12</sjId>
+        <contId>7 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 8</marks>
+        <sjId> 13</sjId>
+        <contId>7 </contId>
+        <pieceId>3 </pieceId>
+        <marks> 7</marks>
+    </scores>
+</root>
