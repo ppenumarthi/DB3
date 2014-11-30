@@ -3,10 +3,11 @@ for $c1 in doc("/db/cse532/FullData.xml")//score,$c2 in doc("/db/cse532/FullData
 where $c1/contId > $c2/contId and $c1/pieceId = $c2/pieceId and $c1/sjId = $c2/sjId and $c1/marks = $c2/marks
 return 
 <result>
-<cont1>{for $c3 in doc("/db/cse532/FullData.xml")//contestant
+{for $c3 in doc("/db/cse532/FullData.xml")//contestant
 where $c3/contestantId=$c1/contId
-return $c3/contestantName}</cont1>
-<cont2>{for $c4 in doc("/db/cse532/FullData.xml")//contestant
+return $c3/contestantName}
+{for $c4 in doc("/db/cse532/FullData.xml")//contestant
 where $c4/contestantId=$c2/contId
-return $c4/contestantName}</cont2>
+return $c4/contestantName}
 </result>
+

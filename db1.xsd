@@ -4,11 +4,10 @@
 	<element name="ShowMarks">
 		<complexType>
 			<sequence>
-			
 				<element name="showDetails">
 					<complexType>
 						<sequence>
-				<element name="showDetail" type="vc:showDetailType" minOccurs="0" maxOccurs="unbounded"/>
+							<element name="showDetail" type="vc:showDetailType" minOccurs="0" maxOccurs="unbounded"/>
 						</sequence>
 					</complexType>
 					<key name="primaryKeyForShowDetails">
@@ -16,11 +15,10 @@
 						<field xpath="showId"/>
 					</key>
 				</element>
-				
 				<element name="judges">
 					<complexType>
 						<sequence>
-				<element name="judge" type="vc:judgeType" minOccurs="0" maxOccurs="unbounded"/>
+							<element name="judge" type="vc:judgeType" minOccurs="0" maxOccurs="unbounded"/>
 						</sequence>
 					</complexType>
 					<key name="primaryKeyForJudges">
@@ -28,11 +26,10 @@
 						<field xpath="judgeId"/>
 					</key>
 				</element>
-				
 				<element name="contestants">
 					<complexType>
 						<sequence>
-				<element name="contestant" type="vc:contestantType" minOccurs="0" maxOccurs="unbounded"/>
+							<element name="contestant" type="vc:contestantType" minOccurs="0" maxOccurs="unbounded"/>
 						</sequence>
 					</complexType>
 					<key name="primaryKeyForContestants">
@@ -40,7 +37,6 @@
 						<field xpath="contestantId"/>
 					</key>
 				</element>
-				
 				<element name="pieces">
 					<complexType>
 						<sequence>
@@ -52,11 +48,10 @@
 						<field xpath="pieceId"/>
 					</key>
 				</element>
-				
 				<element name="showJudges">
 					<complexType>
 						<sequence>
-				<element name="showJudge" type="vc:showJudgeType" minOccurs="0" maxOccurs="unbounded"/>
+							<element name="showJudge" type="vc:showJudgeType" minOccurs="0" maxOccurs="unbounded"/>
 						</sequence>
 					</complexType>
 					<key name="primaryKeyForShowJudges">
@@ -72,7 +67,6 @@
 						<field xpath="judgeId"/>
 					</keyref>
 				</element>
-				
 				<element name="scores">
 					<complexType>
 						<sequence>
@@ -85,7 +79,6 @@
 						<field xpath="contId"/>
 						<field xpath="pieceId"/>
 					</key>
-					
 					<keyref name="NoUnknownSjid" refer="vc:primaryKeyForShowJudges">
 						<selector xpath="score"/>
 						<field xpath="sjId"/>
@@ -98,12 +91,14 @@
 						<selector xpath="score"/>
 						<field xpath="pieceId"/>
 					</keyref>
+					<keyref name="NoUnknownShowInScores" refer="vc:primaryKeyForShowDetails">
+						<selector xpath="score"/>
+						<field xpath="showNum"/>
+					</keyref>
 				</element>
-				
 			</sequence>
 		</complexType>
 	</element>
-
 	<complexType name="showDetailType">
 		<sequence>
 			<element name="showId"/>
@@ -111,28 +106,24 @@
 			<element name="showDate"/>
 		</sequence>
 	</complexType>
-
 	<complexType name="judgeType">
 		<sequence>
 			<element name="judgeId"/>
 			<element name="judgeName"/>
 		</sequence>
 	</complexType>
-
 	<complexType name="contestantType">
 		<sequence>
 			<element name="contestantId"/>
 			<element name="contestantName"/>
 		</sequence>
 	</complexType>
-
 	<complexType name="pieceType">
 		<sequence>
 			<element name="pieceId"/>
 			<element name="pieceName"/>
 		</sequence>
 	</complexType>
-
 	<complexType name="showJudgeType">
 		<sequence>
 			<element name="showJudgeId"/>
@@ -145,6 +136,7 @@
 			<element name="sjId"/>
 			<element name="contId"/>
 			<element name="pieceId"/>
+			<element name="showNum"/>
 			<element name="marks"/>
 		</sequence>
 	</complexType>
