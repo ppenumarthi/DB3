@@ -4,40 +4,114 @@
 	<element name="ShowMarks">
 		<complexType>
 			<sequence>
-				<element name="showDetails" type="vc:showDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			
+				<element name="showDetails">
+					<complexType>
+						<sequence>
+				<element name="showDetail" type="vc:showDetailType" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+					<key name="primaryKeyForShowDetails">
+						<selector xpath="showDetail"/>
+						<field xpath="showId"/>
+					</key>
+				</element>
+				
+				<element name="judges">
+					<complexType>
+						<sequence>
 				<element name="judge" type="vc:judgeType" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+					<key name="primaryKeyForJudges">
+						<selector xpath="contestant"/>
+						<field xpath="judgeId"/>
+					</key>
+				</element>
+				
+				<element name="contestants">
+					<complexType>
+						<sequence>
 				<element name="contestant" type="vc:contestantType" minOccurs="0" maxOccurs="unbounded"/>
-				<element name="piece" type="vc:pieceType" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+					<key name="primaryKeyForContestants">
+						<selector xpath="contestant"/>
+						<field xpath="contestantId"/>
+					</key>
+				</element>
+				
+				<element name="pieces">
+					<complexType>
+						<sequence>
+							<element name="piece" type="vc:pieceType" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+					<key name="primaryKeyForPieces">
+						<selector xpath="piece"/>
+						<field xpath="pieceId"/>
+					</key>
+				</element>
+				
+				<element name="showJudges">
+					<complexType>
+						<sequence>
 				<element name="showJudge" type="vc:showJudgeType" minOccurs="0" maxOccurs="unbounded"/>
-				<element name="score" type="vc:scoreType" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+					<key name="primaryKeyForShowJudges">
+						<selector xpath="showJudge"/>
+						<field xpath="showJudgeId"/>
+					</key>
+				</element>
+				
+				<element name="scores">
+					<complexType>
+						<sequence>
+							<element name="score" type="vc:scoreType" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+					<key name="primaryKeyForScore">
+						<selector xpath="score"/>
+						<field xpath="sjId"/>
+						<field xpath="contId"/>
+						<field xpath="pieceId"/>
+					</key>
+				</element>
+				
 			</sequence>
 		</complexType>
 	</element>
-	<complexType name="showDetailsType">
+
+	<complexType name="showDetailType">
 		<sequence>
 			<element name="showId"/>
 			<element name="showName"/>
 			<element name="showDate"/>
 		</sequence>
 	</complexType>
+
 	<complexType name="judgeType">
 		<sequence>
 			<element name="judgeId"/>
 			<element name="judgeName"/>
 		</sequence>
 	</complexType>
+
 	<complexType name="contestantType">
 		<sequence>
 			<element name="contestantId"/>
 			<element name="contestantName"/>
 		</sequence>
 	</complexType>
+
 	<complexType name="pieceType">
 		<sequence>
 			<element name="pieceId"/>
 			<element name="pieceName"/>
 		</sequence>
 	</complexType>
+
 	<complexType name="showJudgeType">
 		<sequence>
 			<element name="showJudgeId"/>
