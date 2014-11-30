@@ -1,0 +1,9 @@
+<?Query 1>
+for $c1 in doc("/db/cse532/FullData.xml")//score,$c2 in doc("/db/cse532/FullData.xml")//score,$c3 in doc("/db/cse532/FullData.xml")//contestant,$c4 in doc("/db/cse532/FullData.xml")//contestant
+where $c1/contId > $c2/contId and $c1/pieceId = $c2/pieceId and $c1/sjId = $c2/sjId and $c1/marks = $c2/marks and
+$c1/contId = $c3/contestantId and $c2/contId = $c4/contestantId
+return 
+<result>
+<cont1>{$c3/contestantName}</cont1>
+<cont2>{$c4/contestantName}</cont2>
+</result>
