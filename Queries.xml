@@ -1,0 +1,114 @@
+<?Query 1?>
+for $c1 in doc("/db/cse532/FullData.xml")//score,$c2 in doc("/db/cse532/FullData.xml")//score
+where $c1/contId > $c2/contId and $c1/pieceId = $c2/pieceId and $c1/sjId = $c2/sjId and $c1/marks = $c2/marks
+return 
+<result>
+{for $c3 in doc("/db/cse532/FullData.xml")//contestant
+where $c3/contestantId=$c1/contId
+return $c3/contestantName}
+{for $c4 in doc("/db/cse532/FullData.xml")//contestant
+where $c4/contestantId=$c2/contId
+return $c4/contestantName}
+</result>
+<?Query 2 and 3 -- Not working?>
+<!-- Determines the average marks acheived by each contestant for each artPiece in each show. 
+This average marks works.
+But comparision between two contestants is not working. 
+I am getting all the results of each item. 
+Join is not happening. 
+Results is coming as two columns, while it should be like join.-->
+2) for $c2 in doc("/db/cse532/FullData.xml")//score
+order by $c2/contId
+return 
+for $x1 in
+<average>
+ {$c2/contId}
+ {$c2/pieceId}
+ {$c2/showNum}
+ <avgmarks>
+ {avg(for $d in //score
+      where $d/contId=$c2/contId and $d/pieceId=$c2/pieceId  and $d/showNum=$c2/showNum
+	  return $d/marks)}
+ </avgmarks>
+</average>,
+$x2 in
+<average>
+ {$c2/contId}
+ {$c2/pieceId}
+ {$c2/showNum}
+ <avgmarks>
+ {avg(for $e in //score
+      where $e/contId=$c2/contId and $e/pieceId=$c2/pieceId  and $e/showNum=$c2/showNum
+	  return $e/marks)}
+ </avgmarks>
+</average> 
+return <soln>{$x1}{$x2}</soln> 
+<!-- Determines the maximum marks acheived by each contestant for each artPiece in each show. 
+This maximum marks works.
+But comparision between two contestants is not working. 
+I am getting all the results of each item. Join is not working. 
+Results are same as two columns while it should be like join.-->
+3) for $c2 in doc("/db/cse532/FullData.xml")//score
+order by $c2/contId
+return 
+for $x1 in
+<maximum>
+ {$c2/contId}
+ {$c2/pieceId}
+ {$c2/showNum}
+ <maxmarks>
+ {max(for $d in //score
+      where $d/contId=$c2/contId and $d/pieceId=$c2/pieceId  and $d/showNum=$c2/showNum
+	  return $d/marks)}
+ </maxmarks>
+</maximum>,
+$x2 in
+<maximum>
+ {$c2/contId}
+ {$c2/pieceId}
+ {$c2/showNum}
+ <maxmarks>
+ {max(for $e in //score
+      where $e/contId=$c2/contId and $e/pieceId=$c2/pieceId  and $e/showNum=$c2/showNum
+	  return $e/marks)}
+ </maxmarks>
+</maximum> 
+where $x1/maxmarks = $x2/maxmarks 
+return <soln>{$x1}{$x2}</soln> 
+
+<!-- Number of judges in each show: This works, but I dont understand why repetitions -->
+for $c in doc("/db/cse532/FullData.xml")//showJudge
+let $s:= distinct-values($c/showId)
+return
+<ShowAndNumJudges>
+<showNum>
+{$s}</showNum>
+<NumJudges>{
+count(
+for $t in doc("/db/cse532/FullData.xml")//showJudge
+where $t/showId=$s
+return $t/judgeId)} < 2) 
+</NumJudges>
+</ShowAndNumJudges>
+
+<!-- Shows with atleast 3 judges: This works, but I dont understand why repetitions-->
+for $x in 
+
+for $c in doc("/db/cse532/FullData.xml")//showJudge
+let $s:= distinct-values($c/showId)
+return
+<ShowAndNumJudges>
+<showNum>
+{$s}</showNum>
+<NumJudges> 
+{
+count(
+for $t in doc("/db/cse532/FullData.xml")//showJudge
+where $t/showId=$s
+return $t/judgeId) }
+</NumJudges>
+</ShowAndNumJudges>
+
+where $x/NumJudges > 2
+return $x/showNum>
+<!-- integrating above studd into functions is giving too many erros -->
