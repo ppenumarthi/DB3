@@ -1,0 +1,6 @@
+README
+----------
+Create a folder named "cse532" in exist-db prompt.
+Import file db1.xsd using "Store files/collection" in the created directory.
+Import FullData.xml also into the same directory.
+Evaluate queries in the file Query.xml sequentially and observe the results.
